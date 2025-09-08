@@ -1,0 +1,35 @@
+def kg_to_lb(kg):
+    return kg * 2.20462
+
+def lb_to_kg(lb):
+    return lb / 2.20462
+
+def c_to_f(c):
+    return (c * 9/5) + 32
+
+def f_to_c(f):
+    return (f - 32) * 5/9
+
+print("Добро пожаловать в Конвертер величин!")
+print("Выберите операцию:")
+print("1. Килограммы → Фунты")
+print("2. Фунты → Килограммы")
+print("3. Цельсий → Фаренгейт")
+print("4. Фаренгейт → Цельсий")
+
+choice = input("Ваш выбор (1-4): ")
+
+if choice == "1":
+    kg = float(input("Введите массу в кг: "))
+    print(f"{kg} кг = {kg_to_lb(kg):.2f} фунтов")
+elif choice == "2":
+    lb = float(input("Введите массу в фунтах: "))
+    print(f"{lb} фунтов = {lb_to_kg(lb):.2f} кг")
+elif choice == "3":
+    c = float(input("Введите температуру в °C: "))
+    print(f"{c}°C = {c_to_f(c):.2f}°F")
+elif choice == "4":
+    f = float(input("Введите температуру в °F: "))
+    print(f"{f}°F = {f_to_c(f):.2f}°C")
+else:
+    print("Неверный выбор!")
